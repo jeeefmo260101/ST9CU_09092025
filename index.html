@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Materi: Core Values ASN BerAKHLAK</title>
+    <!-- Memanggil Tailwind CSS untuk styling modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memanggil Font Awesome untuk ikon yang menarik -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles for the interactive cards and overall look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Style for the detail view that will be shown/hidden */
+        .card-detail {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+        .card.active .card-detail {
+            max-height: 500px; /* Adjust as needed */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .card.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+        .arrow-icon {
+            transition: transform 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="bg-blue-600 text-white p-3 rounded-lg shadow-md">
+                    <i class="fas fa-user-shield text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Materi Core Values ASN</h1>
+                    <p class="text-gray-500">Menjadi ASN yang #BanggaMelayaniBangsa</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-10">
+
+        <!-- Introduction Text -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-3 text-blue-600">Apa itu BerAKHLAK?</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                BerAKHLAK bukan sekadar slogan, melainkan fondasi perilaku dan budaya kerja kita sebagai Aparatur Sipil Negara. Ini adalah akronim yang menjadi panduan kita dalam bekerja dan melayani. Mari kita bedah satu per satu!
+            </p>
+        </div>
+
+        <!-- Interactive Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: BerAKHLAK (The Acronym) -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-purple-100 text-purple-600 rounded-lg p-3">
+                                <i class="fas fa-star fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">BerAKHLAK</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-purple-50">
+                    <p class="font-semibold text-purple-800 mb-2">Ini dia kepanjangannya:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-bold">Ber</span>orientasi Pelayanan</li>
+                        <li><span class="font-bold">A</span>kuntabel</li>
+                        <li><span class="font-bold">K</span>ompeten</li>
+                        <li><span class="font-bold">H</span>armonis</li>
+                        <li><span class="font-bold">L</span>oyal</li>
+                        <li><span class="font-bold">A</span>daptif</li>
+                        <li><span class="font-bold">K</span>olaboratif</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2: Akuntabel -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 text-blue-600 rounded-lg p-3">
+                                <i class="fas fa-check-double fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Akuntabel</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-blue-50">
+                    <p class="text-gray-700 mb-3">Artinya, kita bertanggung jawab atas kepercayaan yang diberikan. Ini soal integritas dan transparansi.</p>
+                    <p class="font-semibold text-blue-800 mb-2">Kata Kunci Perilaku:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Melaksanakan tugas dengan jujur & cermat.</li>
+                        <li>Menggunakan kekayaan negara secara efektif.</li>
+                        <li>Tidak menyalahgunakan wewenang jabatan.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3: Kompeten -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-green-100 text-green-600 rounded-lg p-3">
+                                <i class="fas fa-brain fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Kompeten</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-green-50">
+                    <p class="text-gray-700 mb-3">Dunia terus berubah, kita pun harus terus belajar dan mengembangkan kapabilitas agar bisa memberikan yang terbaik.</p>
+                    <p class="font-semibold text-green-800 mb-2">Kata Kunci Perilaku:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Meningkatkan kompetensi diri.</li>
+                        <li>Membantu orang lain belajar.</li>
+                        <li>Melaksanakan tugas dengan kualitas terbaik.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Card 4: Harmonis -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-yellow-100 text-yellow-600 rounded-lg p-3">
+                                <i class="fas fa-users fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Harmonis</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-yellow-50">
+                    <p class="text-gray-700 mb-3">Kita saling peduli dan menghargai setiap perbedaan. Lingkungan kerja yang kondusif lahir dari keharmonisan.</p>
+                    <p class="font-semibold text-yellow-800 mb-2">Kata Kunci Perilaku:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Menghargai setiap orang apapun latar belakangnya.</li>
+                        <li>Suka menolong orang lain.</li>
+                        <li>Membangun lingkungan kerja yang kondusif.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Card 5: Loyal -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-red-100 text-red-600 rounded-lg p-3">
+                                <i class="fas fa-shield-heart fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Loyal</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-red-50">
+                    <p class="text-gray-700 mb-3">Berdedikasi dan mengutamakan kepentingan Bangsa dan Negara di atas segalanya.</p>
+                    <p class="font-semibold text-red-800 mb-2">Kata Kunci Perilaku:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Memegang teguh ideologi Pancasila & UUD 1945.</li>
+                        <li>Setia kepada NKRI dan pemerintahan yang sah.</li>
+                        <li>Menjaga nama baik ASN, Pimpinan, dan Negara.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 6: Adaptif -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-teal-100 text-teal-600 rounded-lg p-3">
+                                <i class="fas fa-rocket fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Adaptif</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-teal-50">
+                    <p class="text-gray-700 mb-3">Terus berinovasi dan antusias dalam menghadapi ataupun menggerakkan perubahan. Fleksibilitas adalah kunci.</p>
+                    <p class="font-semibold text-teal-800 mb-2">Kata Kunci Perilaku:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Cepat menyesuaikan diri menghadapi perubahan.</li>
+                        <li>Terus berinovasi mengembangkan kreativitas.</li>
+                        <li>Bertindak proaktif.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 7: Kolaboratif -->
+            <div class="card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer" onclick="toggleCard(this)">
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-indigo-100 text-indigo-600 rounded-lg p-3">
+                                <i class="fas fa-handshake fa-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Kolaboratif</h3>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="card-detail px-6 bg-indigo-50">
+                    <p class="text-gray-700 mb-3">Membangun kerja sama yang sinergis dengan berbagai pihak untuk hasil yang lebih baik.</p>
+                    <p class="font-semibold text-indigo-800 mb-2">Kata Kunci Perilaku:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li>Memberi kesempatan berbagai pihak berkontribusi.</li>
+                        <li>Terbuka dalam bekerja sama untuk nilai tambah.</li>
+                        <li>Menggerakkan pemanfaatan sumber daya untuk tujuan bersama.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-white mt-12 border-t">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>© 2025 - Tim Kompetensi dan Hukum BPS Provinsi Sumatera Utara</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleCard(cardElement) {
+            // This function adds or removes the 'active' class to the clicked card
+            cardElement.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
